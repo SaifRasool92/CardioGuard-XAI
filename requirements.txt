@@ -2,6 +2,6 @@ streamlit
 pandas
 scikit-learn
 shap
-matplotlib
+matplotlib<=3.8.4
 xgboost
 seaborn
