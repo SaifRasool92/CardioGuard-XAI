@@ -1,6 +1,6 @@
 streamlit
 pandas
 scikit-learn
-shap==0.45.0
+shap
 matplotlib<3.9.0
 seaborn
