@@ -1,6 +1,8 @@
-streamlit
-pandas
-scikit-learn
-shap
-matplotlib<3.9.0
-seaborn
+streamlit==1.38.0
+pandas==2.2.2
+scikit-learn==1.5.2
+shap==0.52.0
+matplotlib==3.11.2
+seaborn==0.13.2
+numpy==2.2.6
+scipy==1.14.1
