@@ -171,7 +171,7 @@ with tab1:
         shap.plots.waterfall(shap_values_class1[0], show=False)
         plt.tight_layout()
         st.pyplot(fig)
-        plt.clf()
+        plt.close(fig)
 
 # --- TAB 2: Global Insights ---
 with tab2:
@@ -193,7 +193,7 @@ with tab2:
     fig2, ax2 = plt.subplots(figsize=(8, 6))
     shap.summary_plot(g_shap, features=X_full.sample(min(len(X_full), 200), random_state=42), show=False)
     st.pyplot(fig2)
-    plt.clf()
+    plt.close(fig2)
 
 # --- TAB 3: Model Performance ---
 with tab3:
@@ -216,7 +216,7 @@ with tab3:
         sns.heatmap(metrics['Confusion Matrix'], annot=True, fmt='d', cmap='Blues', ax=ax_cm,
                     xticklabels=['Predicted 0', 'Predicted 1'], yticklabels=['Actual 0', 'Actual 1'])
         st.pyplot(fig_cm)
-        plt.clf()
+        plt.close(fig_cm)
         
     with col_roc:
         st.write("**ROC Curve**")
@@ -227,7 +227,7 @@ with tab3:
         ax_roc.set_ylabel('True Positive Rate')
         ax_roc.legend(loc='lower right')
         st.pyplot(fig_roc)
-        plt.clf()
+        plt.close(fig_roc)
 
 # --- TAB 4: Data Explorer ---
 with tab4:
@@ -243,4 +243,4 @@ with tab4:
     sns.countplot(data=df, x='target', palette='viridis', ax=ax_dist)
     ax_dist.set_xticklabels(['Low Risk (0)', 'High Risk (1)'])
     st.pyplot(fig_dist)
-    plt.clf()
+    plt.close(fig_dist)
